@@ -1,10 +1,13 @@
 FROM node:16
 
-# Create app directory
+# Create and define app directory
 WORKDIR /home/node/app
 
 # Copy files from host
-COPY * /home/node/app/
+COPY . .
 
-# Run the proyect
+# Install the node/js dependencies
+RUN npm install
+
+# Run the project
 CMD [ "npm", "start" ]
