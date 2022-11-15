@@ -14,6 +14,8 @@ services:
       MYSQLDATABASE: docker-node-example
       MYSQLUSER: docker-node-user
       MYSQLPASSWORD: docker-node-password
+    volumes:
+      - .:/home/node/app
 
   db:
     image: mysql:latest
