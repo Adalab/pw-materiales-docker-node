@@ -15,20 +15,14 @@
   </header>
 
   <main class="mt-1">
-    <ul class="cards">
-      <% posts.forEach((post)=> { %>
-        <li>
-          <article class="card">
-            <h2 class="card__title">
-              <%= post.title %>
-            </h2>
-            <p class="card__description">
-              <%= post.brief.substring(0, 160) %>
-            </p>
-          </article>
-        </li>
-        <% }) %>
-    </ul>
+    <details>
+      <summary class="text--error">
+        Ha ocurrido un error con el servidor. Por favor, inténtalo más tarde
+      </summary>
+      <p class="mt-1 ml-1">
+        <%= error %>
+      </p>
+    </details>
   </main>
 </body>
 
