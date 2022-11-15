@@ -9,11 +9,11 @@ services:
       - '3500:3000'
     environment:
       PORT: 3000
-      MYSQLHOST: db
-      MYSQLPORT: 3306
-      MYSQLDATABASE: docker-node-example
-      MYSQLUSER: docker-node-user
-      MYSQLPASSWORD: docker-node-password
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: docker-node-example
+      MYSQL_USER: docker-node-user
+      MYSQL_PASSWORD: docker-node-password
     volumes:
       - .:/home/node/app
 
