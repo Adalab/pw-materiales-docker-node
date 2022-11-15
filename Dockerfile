@@ -3,6 +3,9 @@ FROM node:16
 # Create and define app directory
 WORKDIR /home/node/app
 
+# Install nodemon (for development purpouses...)
+RUN npm install -g nodemon
+
 # Copy files from host
 COPY . .
 
@@ -10,4 +13,4 @@ COPY . .
 RUN npm install
 
 # Run the project
-CMD [ "npm", "start" ]
+CMD [ "nodemon", "src/index.js" ]
